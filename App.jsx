@@ -1,7 +1,10 @@
 import React from "react"
 
+import GameButton from "./GameButton.jsx"
+
+
+
 export default function App() {
-  
   const [gameRunning, setGameRunning] = React.useState(false)
   
 /* Challenge
@@ -26,8 +29,8 @@ export default function App() {
            when you click it, and the workshop background should be automatically replaced by a light blue background.
 */
     return (
-        <div>       
-
+        <div style={{background: !gameRunning? "url(./images/workshopBackground.jpg)":"#AED9E0"}}>        
+          <GameButton gameRunning={gameRunning} setGameRunning={setGameRunning}/>
         </div>
   )
 }
